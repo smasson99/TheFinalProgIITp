@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Background">
+      <UniqueIdentifier>{9f8e8b62-4646-4a3c-90e7-53b7225bb295}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Fonts">
+      <UniqueIdentifier>{68014b2f-a6e0-442e-b4a9-7ad4097cf637}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Textures">
+      <UniqueIdentifier>{efe7d962-5315-4a88-973c-8c821f1522a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Textures\Actors">
+      <UniqueIdentifier>{c6e96625-34f0-42c5-9372-ec22676c18ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Textures\Other">
+      <UniqueIdentifier>{db769ef0-4fbf-4c83-bb6b-31e5cc7493fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Game">
+      <UniqueIdentifier>{723da78f-6a07-43a2-b2fc-3b71852bae81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Math">
+      <UniqueIdentifier>{3252ee7c-d4d7-4cca-86dc-555c134e8a8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Actors">
+      <UniqueIdentifier>{0a4c905f-a21a-4d5a-857e-f44afd3eede3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Actors\Enemys">
+      <UniqueIdentifier>{ac58f1cc-0b67-486d-8928-690b5181abf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Actors\Player">
+      <UniqueIdentifier>{b8e18c10-db4c-4908-89fb-434320a38804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Algorithms">
+      <UniqueIdentifier>{e625678e-bfe5-4020-bf66-4a6dad44740f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Algorithms\Containers">
+      <UniqueIdentifier>{0a0b1dd5-e3f7-4572-a299-f7e030f494fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Fabrics">
+      <UniqueIdentifier>{a3675afd-17bf-4386-94c5-ebc81880866a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Objects">
+      <UniqueIdentifier>{a042f5b6-7450-43c9-99aa-64906dd5f888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Scenes">
+      <UniqueIdentifier>{1e0befe3-177c-49e7-8b52-2e14fe7042fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Others">
+      <UniqueIdentifier>{00bd39f8-768d-4ed2-9d4d-19b9659023b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Objects\UI">
+      <UniqueIdentifier>{54edcbef-301a-43ec-b6c1-a910daf8e6c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Objects\Projectiles">
+      <UniqueIdentifier>{b01d6408-d698-47a4-9b5c-078d1cf4c36d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Objects\Weapons">
+      <UniqueIdentifier>{e1249ebe-ab42-4b21-9fc1-414f2a0e263a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Others\Basic">
+      <UniqueIdentifier>{64af617b-a0b5-4cdb-8747-5f4e28cee1e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Objects\Bonus">
+      <UniqueIdentifier>{2bd7c6f7-936a-4113-b500-c1884d0c3a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Scenes\Backgrounds">
+      <UniqueIdentifier>{3a1ccc5f-6b58-4175-96e7-dcb30d0a7b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Scenes\Backgrounds\Stars">
+      <UniqueIdentifier>{a5822e05-ee26-45ae-a2fb-114c51612324}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Scenes\Backgrounds\Back">
+      <UniqueIdentifier>{81ea9626-94ec-4fcc-8d1b-ef7dc4bfb6f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Actors">
+      <UniqueIdentifier>{bce714c9-b396-4785-b733-3586bdf592d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Actors\Enemys">
+      <UniqueIdentifier>{f67abe9e-175f-4427-a958-a9547ce9b780}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Actors\Player">
+      <UniqueIdentifier>{55f7ed46-b33f-4e96-873a-fdf75e60ba95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Game">
+      <UniqueIdentifier>{ae9c3cbf-acb0-4f5d-a4d6-ff908e6e84ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Math">
+      <UniqueIdentifier>{779d4a2d-fc3f-4b88-ad0b-28607cc7e9ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Algorithms">
+      <UniqueIdentifier>{1890c526-bdb3-4025-be8c-b601fb35ba1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Algorithms\Containers">
+      <UniqueIdentifier>{efeb7e6c-c528-46ec-a2e3-f8e5b74740b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Fabrics">
+      <UniqueIdentifier>{4e7c0785-ea69-4e36-b242-4017e2646923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Others">
+      <UniqueIdentifier>{dd4398d1-a5e2-4e41-b1b5-87695e882a6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Others\Basic">
+      <UniqueIdentifier>{50d339f5-2299-46e8-815c-9797cfab5814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Scenes">
+      <UniqueIdentifier>{5e1e6614-7e80-4242-9b39-6c8b180f0ac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Scenes\Backgrounds">
+      <UniqueIdentifier>{49f079a0-b295-424a-bb88-7eac04d449b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Scenes\Backgrounds\Back">
+      <UniqueIdentifier>{ed9f9dea-d5fb-426b-869b-a638efe2dc6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Scenes\Backgrounds\Stars">
+      <UniqueIdentifier>{fde20dba-123c-4d29-977f-9eb26b613349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Objects">
+      <UniqueIdentifier>{80693c72-f80b-4858-84d4-7aa7dfc72b52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Objects\Bonus">
+      <UniqueIdentifier>{3253028f-7c54-459b-97d7-5674eb9cdcad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Objects\Weapons">
+      <UniqueIdentifier>{13607e3c-d993-469c-a9de-b18b43310041}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Objects\Projectiles">
+      <UniqueIdentifier>{69c421bf-d2b7-49ee-8117-e747c4b13112}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Objects\UI">
+      <UniqueIdentifier>{7dc1628e-5eda-481b-ad34-6e36120f9280}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Ressources\Background\Background.jpg">
+      <Filter>Fichiers de ressources\Background</Filter>
+    </Image>
+    <Image Include="Ressources\Background\LeftHUD.png">
+      <Filter>Fichiers de ressources\Background</Filter>
+    </Image>
+    <Image Include="Ressources\Background\RightHUD.png">
+      <Filter>Fichiers de ressources\Background</Filter>
+    </Image>
+    <Image Include="Ressources\Textures\Actors\Ship.png">
+      <Filter>Fichiers de ressources\Textures\Actors</Filter>
+    </Image>
+    <Image Include="Ressources\Textures\Other\Multiplicator.png">
+      <Filter>Fichiers de ressources\Textures\Other</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Ressources\Fonts\STJEDISE.TTF">
+      <Filter>Fichiers de ressources\Fonts</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\Game.h">
+      <Filter>Fichiers d%27en-tête\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\GameStyle.h">
+      <Filter>Fichiers d%27en-tête\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Spaceship.h">
+      <Filter>Fichiers d%27en-tête\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Player.h">
+      <Filter>Fichiers d%27en-tête\Actors\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\BasicEnemy.h">
+      <Filter>Fichiers d%27en-tête\Actors\Enemys</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Enemy.h">
+      <Filter>Fichiers d%27en-tête\Actors\Enemys</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Kamikaze.h">
+      <Filter>Fichiers d%27en-tête\Actors\Enemys</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\GlobalMath.h">
+      <Filter>Fichiers d%27en-tête\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\DQueue.h">
+      <Filter>Fichiers d%27en-tête\Algorithms\Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\List.h">
+      <Filter>Fichiers d%27en-tête\Algorithms\Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Stack.h">
+      <Filter>Fichiers d%27en-tête\Algorithms\Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\BonusFabric.h">
+      <Filter>Fichiers d%27en-tête\Fabrics</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ProjectileGenerator.h">
+      <Filter>Fichiers d%27en-tête\Fabrics</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\WeaponGenerator.h">
+      <Filter>Fichiers d%27en-tête\Fabrics</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\GameScene.h">
+      <Filter>Fichiers d%27en-tête\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\EndScreen.h">
+      <Filter>Fichiers d%27en-tête\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\MainMenu.h">
+      <Filter>Fichiers d%27en-tête\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Scene.h">
+      <Filter>Fichiers d%27en-tête\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Button.h">
+      <Filter>Fichiers d%27en-tête\Objects\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Weapon.h">
+      <Filter>Fichiers d%27en-tête\Objects\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Testeur.h">
+      <Filter>Fichiers d%27en-tête\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Observer.h">
+      <Filter>Fichiers d%27en-tête\Others\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\StaticSubject.h">
+      <Filter>Fichiers d%27en-tête\Others\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Subject.h">
+      <Filter>Fichiers d%27en-tête\Others\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Bombe.h">
+      <Filter>Fichiers d%27en-tête\Objects\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Bonus.h">
+      <Filter>Fichiers d%27en-tête\Objects\Bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ScoreBonus.h">
+      <Filter>Fichiers d%27en-tête\Objects\Bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Background.h">
+      <Filter>Fichiers d%27en-tête\Scenes\Backgrounds\Back</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Star.h">
+      <Filter>Fichiers d%27en-tête\Scenes\Backgrounds\Stars</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Projectile.h">
+      <Filter>Fichiers d%27en-tête\Objects\Projectiles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\Spaceship.cpp">
+      <Filter>Fichiers sources\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BasicEnemy.cpp">
+      <Filter>Fichiers sources\Actors\Enemys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Enemy.cpp">
+      <Filter>Fichiers sources\Actors\Enemys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Kamikaze.cpp">
+      <Filter>Fichiers sources\Actors\Enemys</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Player.cpp">
+      <Filter>Fichiers sources\Actors\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Game.cpp">
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameStyle.cpp">
+      <Filter>Fichiers sources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GlobalMath.cpp">
+      <Filter>Fichiers sources\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\BonusFabric.cpp">
+      <Filter>Fichiers sources\Fabrics</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ProjectileGenerator.cpp">
+      <Filter>Fichiers sources\Fabrics</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\WeaponGenerator.cpp">
+      <Filter>Fichiers sources\Fabrics</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Observer.cpp">
+      <Filter>Fichiers sources\Others\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\StaticSubject.cpp">
+      <Filter>Fichiers sources\Others\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Subject.cpp">
+      <Filter>Fichiers sources\Others\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Testeur.cpp">
+      <Filter>Fichiers sources\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\EndScreen.cpp">
+      <Filter>Fichiers sources\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameScene.cpp">
+      <Filter>Fichiers sources\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\MainMenu.cpp">
+      <Filter>Fichiers sources\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Background.cpp">
+      <Filter>Fichiers sources\Scenes\Backgrounds\Back</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Star.cpp">
+      <Filter>Fichiers sources\Scenes\Backgrounds\Stars</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Bonus.cpp">
+      <Filter>Fichiers sources\Objects\Bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Button.cpp">
+      <Filter>Fichiers sources\Objects\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Projectile.cpp">
+      <Filter>Fichiers sources\Objects\Projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Weapon.cpp">
+      <Filter>Fichiers sources\Objects\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Bombe.cpp">
+      <Filter>Fichiers sources\Objects\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ScoreBonus.cpp">
+      <Filter>Fichiers sources\Objects\Bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

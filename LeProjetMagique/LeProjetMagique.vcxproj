@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Ressources\Background\Background.jpg" />
+    <Image Include="Ressources\Background\LeftHUD.png" />
+    <Image Include="Ressources\Background\RightHUD.png" />
+    <Image Include="Ressources\Textures\Actors\Ship.png" />
+    <Image Include="Ressources\Textures\Other\Multiplicator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Ressources\Fonts\STJEDISE.TTF" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\Background.h" />
+    <ClInclude Include="Headers\BasicEnemy.h" />
+    <ClInclude Include="Headers\Bombe.h" />
+    <ClInclude Include="Headers\Bonus.h" />
+    <ClInclude Include="Headers\BonusFabric.h" />
+    <ClInclude Include="Headers\Button.h" />
+    <ClInclude Include="Headers\DQueue.h" />
+    <ClInclude Include="Headers\EndScreen.h" />
+    <ClInclude Include="Headers\Enemy.h" />
+    <ClInclude Include="Headers\Game.h" />
+    <ClInclude Include="Headers\GameScene.h" />
+    <ClInclude Include="Headers\GameStyle.h" />
+    <ClInclude Include="Headers\GlobalMath.h" />
+    <ClInclude Include="Headers\Kamikaze.h" />
+    <ClInclude Include="Headers\List.h" />
+    <ClInclude Include="Headers\MainMenu.h" />
+    <ClInclude Include="Headers\Observer.h" />
+    <ClInclude Include="Headers\Player.h" />
+    <ClInclude Include="Headers\Projectile.h" />
+    <ClInclude Include="Headers\ProjectileGenerator.h" />
+    <ClInclude Include="Headers\Scene.h" />
+    <ClInclude Include="Headers\ScoreBonus.h" />
+    <ClInclude Include="Headers\Spaceship.h" />
+    <ClInclude Include="Headers\Stack.h" />
+    <ClInclude Include="Headers\Star.h" />
+    <ClInclude Include="Headers\StaticSubject.h" />
+    <ClInclude Include="Headers\Subject.h" />
+    <ClInclude Include="Headers\Testeur.h" />
+    <ClInclude Include="Headers\Weapon.h" />
+    <ClInclude Include="Headers\WeaponGenerator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\Background.cpp" />
+    <ClCompile Include="Sources\BasicEnemy.cpp" />
+    <ClCompile Include="Sources\Bombe.cpp" />
+    <ClCompile Include="Sources\Bonus.cpp" />
+    <ClCompile Include="Sources\BonusFabric.cpp" />
+    <ClCompile Include="Sources\Button.cpp" />
+    <ClCompile Include="Sources\EndScreen.cpp" />
+    <ClCompile Include="Sources\Enemy.cpp" />
+    <ClCompile Include="Sources\Game.cpp" />
+    <ClCompile Include="Sources\GameScene.cpp" />
+    <ClCompile Include="Sources\GameStyle.cpp" />
+    <ClCompile Include="Sources\GlobalMath.cpp" />
+    <ClCompile Include="Sources\Kamikaze.cpp" />
+    <ClCompile Include="Sources\Main.cpp" />
+    <ClCompile Include="Sources\MainMenu.cpp" />
+    <ClCompile Include="Sources\Observer.cpp" />
+    <ClCompile Include="Sources\Player.cpp" />
+    <ClCompile Include="Sources\Projectile.cpp" />
+    <ClCompile Include="Sources\ProjectileGenerator.cpp" />
+    <ClCompile Include="Sources\ScoreBonus.cpp" />
+    <ClCompile Include="Sources\Spaceship.cpp" />
+    <ClCompile Include="Sources\Star.cpp" />
+    <ClCompile Include="Sources\StaticSubject.cpp" />
+    <ClCompile Include="Sources\Subject.cpp" />
+    <ClCompile Include="Sources\Testeur.cpp" />
+    <ClCompile Include="Sources\Weapon.cpp" />
+    <ClCompile Include="Sources\WeaponGenerator.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{d568bb32-9300-44e6-996e-ac9f32c85d2f}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LeProjetMagique</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>Headers;$(SFML_ROOT)\include;$(VC_IncludePath);</IncludePath>
+    <LibraryPath>$(SFML_ROOT)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SFML_ROOT)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SFML_ROOT)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-main-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-window-d.lib;openal32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /d /y $(SFML_ROOT)\bin\Debug\*.* "..\Debug\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-system.lib;sfml-main.lib;sfml-graphics.lib;sfml-audio.lib;sfml-network.lib;sfml-window.lib;openal32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /d /y $(SFML_ROOT)\bin\Release\*.* "..\Release\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
