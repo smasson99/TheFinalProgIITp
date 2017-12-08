@@ -14,6 +14,7 @@ namespace spaceShooter
     {
     public:
         Projectile(const float x, const float y, const Color color, const float speed, Spaceship* owner);
+		Projectile();
         ~Projectile();
         static enum ProjectileType
         {

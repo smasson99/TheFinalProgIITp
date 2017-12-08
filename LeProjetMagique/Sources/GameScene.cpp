@@ -1,6 +1,7 @@
 #include "GameScene.h"
 #include "GameStyle.h"
 #include "ProjectileGenerator.h"
+#include "Spawner.h"
 #include "GlobalMath.h"
 //Debug
 #include <iostream>
@@ -194,7 +195,7 @@ bool GameScene::init(RenderWindow * const window)
     for (int i = 0; i < NB_BASIC_ENEMYS; ++i)
     {
         //Push d'un ennemi
-        basicEnemys.push_back(new BasicEnemy());
+        basicEnemys.push_back((BasicEnemy*)Spawner::SpawnMob(Enemy::BASIC));
         //Init de l'ennemi en question
         basicEnemys.at(i)->AdjustVisual();
     }
@@ -202,7 +203,7 @@ bool GameScene::init(RenderWindow * const window)
     for (int i = 0; i < NB_KAMIKAZES; ++i)
     {
         //Push d'un kamikaze
-        kamikazes.push_back(new Kamikaze());
+        kamikazes.push_back((Kamikaze*)Spawner::SpawnMob(Enemy::KAMIKAZE));
         //Init de l'ennemi en question
         kamikazes.at(i)->AdjustVisual();
     }

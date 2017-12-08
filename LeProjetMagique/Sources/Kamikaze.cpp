@@ -5,7 +5,7 @@ using namespace spaceShooter;
 
 Texture Kamikaze::texture;
 
-Kamikaze::Kamikaze() : Bombe(0, 0, Color(), startSpeed, new Spaceship())
+Kamikaze::Kamikaze() : Bombe()
 {
     isSlave = false;
     type = Enemy::EnemyType::BASIC;

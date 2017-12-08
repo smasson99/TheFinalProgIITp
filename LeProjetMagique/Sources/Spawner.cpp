@@ -1,37 +1,31 @@
 #include "Spawner.h"
 #include "BasicEnemy.h"
+#include "Kamikaze.h"
 using namespace spaceShooter;
 static float posX;
 static float posY;
-Enemy Spawner::SpawnMob(Enemies type)
+Enemy * Spawner::SpawnMob(Enemy::EnemyType type)
 {
-	if (type == Enemies::BASIC)
+	Enemy* retVal = nullptr;
+	if (type == Enemy::EnemyType::BASIC)
 	{
-		BasicEnemy retVal;
-		retVal.SetPosition(posX,posY);
+		retVal = new BasicEnemy();
 	}
-	else if (type == Enemies::KAMIKAZE)
+	else if (type == Enemy::EnemyType::KAMIKAZE)
 	{
-
+		retVal = new Kamikaze();
 	}
-	else if (type == Enemies::REFLECTOR)
-	{
-
-	}
-	else if (type == Enemies::QUEEN)
+	else if (type == Enemy::EnemyType::REFLECTOR)
 	{
 
 	}
-	else if (type == Enemies::BOSS_CANNON)
+	else if (type == Enemy::EnemyType::QUEEN)
 	{
 
 	}
-	Enemy das;
-	return das;
-}
+	else if (type == Enemy::EnemyType::BOSS_CANNON)
+	{
 
-void Spawner::SetPosition(float x, float y)
-{
-	posX = x;
-	posY = y;
+	}
+	return retVal;
 }

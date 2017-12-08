@@ -14,6 +14,10 @@ Bombe::Bombe(const float x, const float y, const Color color, const float speed,
 	// On ajoute une sprite propre à la bombe
 
 }
+Bombe::Bombe() : Projectile()
+{
+
+}
 
 //void Bombe::Update()
 //{

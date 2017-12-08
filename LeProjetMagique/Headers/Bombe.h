@@ -13,6 +13,7 @@ namespace spaceShooter
 	public:
 
 		Bombe(const float x, const float y, const Color color, const float speed, Spaceship* owner);
+		Bombe();
 		//void Update();
 		//float GetRadius();
 		Vector2f Bombe::GetPosition();

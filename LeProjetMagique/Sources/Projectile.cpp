@@ -14,6 +14,10 @@ spaceShooter::Projectile::Projectile(const float x, const float y, const Color c
     isEnable = false;
     this->damage = owner->GetCurDamage();
 }
+spaceShooter::Projectile::Projectile()
+{
+	shape = new RectangleShape();
+}
 
 spaceShooter::Projectile::~Projectile()
 {
