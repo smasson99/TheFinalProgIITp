@@ -47,12 +47,8 @@ void spaceShooter::Bonus::Update()
         {
             //Avertir l'observateur
             curObserver->NotifyBonusCollision(this);
-            //Nous sommes disable
-            Disable();
             //Debug
-            std::cout << "Collision avec un bonus." << std::endl;
-            //C'est cet observateur qui a le bonus
-            break;
+            //std::cout << "Collision avec un bonus." << std::endl;
         }
     }
 #pragma endregion
@@ -102,4 +98,9 @@ void spaceShooter::Bonus::CleanUp()
         curObserver = nullptr;
     }
     observers.clear();
+}
+
+Bonus::BonusType spaceShooter::Bonus::GetType()
+{
+    return type;
 }

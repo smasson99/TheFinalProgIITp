@@ -33,6 +33,16 @@ void spaceShooter::Kamikaze::AdjustVisual()
     sprite->setOrigin(texture.getSize().x / 2, texture.getSize().y / 2);
 }
 
+bool spaceShooter::Kamikaze::IsEnable()
+{
+    return Spaceship::IsEnable() && Projectile::IsEnable();
+}
+
+void spaceShooter::Kamikaze::Start(Vector2f startPos, default_random_engine & engine)
+{
+    Spaceship::Start(startPos, engine);
+}
+
 bool Kamikaze::Update(Vector2f target)
 {
     curSpeed += 0.002;

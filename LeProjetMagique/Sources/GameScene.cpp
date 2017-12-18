@@ -59,7 +59,7 @@ GameScene::~GameScene()
 
 Scene::scenes GameScene::run()
 {
-
+    //Boucle du jeu
     while (isRunning)
     {
         getInputs();
@@ -264,6 +264,7 @@ bool GameScene::init(RenderWindow * const window)
         enemysToCome.Push(res);
         ok = false;
     }
+    UpdateNextEnemyString();
 #pragma endregion
 
     //Initialisation du joueur
@@ -493,14 +494,14 @@ void GameScene::update()
         }
     }
     //Update des kamikases actifs
-    /*for (Kamikaze* curEnem : kamikazes)
+    for (Kamikaze* curEnem : kamikazes)
     {
         //Conversion temporaire
         if (curEnem->IsEnable())
         {
-
+            curEnem->Update(player->GetSprite()->getPosition());
         }
-    }*/
+    }
 #pragma endregion
     //Update du joueur
     player->Update(interfaceCommande);
@@ -519,6 +520,8 @@ void GameScene::update()
         SpawnEnemy(enemysToCome.Front());
         //On enlève le premier ennemi de la liste
         enemysToCome.Pop();
+        //On update le string du prochain ennemi
+        UpdateNextEnemyString();
         //Reset de l'horloge
         clockEnemys.restart();
         //Reset du timer
@@ -565,7 +568,7 @@ void GameScene::draw()
         }
     }
     //Kamikazes
-    /*for (Kamikaze* curEnem : kamikazes)
+    for (Kamikaze* curEnem : kamikazes)
     {
         //Conversion temporaire
         Spaceship* temp = (Spaceship*)curEnem;
@@ -575,7 +578,7 @@ void GameScene::draw()
         }
         temp = nullptr;
         delete temp;
-    }*/
+    }
     // Bombes
     for (size_t i = 0; i < bombs.size(); i++)
     {
@@ -723,6 +726,18 @@ void spaceShooter::GameScene::SpawnEnemy(int type)
         break;
     case Enemy::EnemyType::KAMIKAZE:
         cout << "Kamikaze spawn!" << endl;
+        for (Kamikaze* curEnem : kamikazes)
+        {
+            if (!curEnem->IsEnable())
+            {
+                //Random
+                uniform_int_distribution<int> distribution(Background::LeftLimit() + curEnem->GetSprite()->getGlobalBounds().width / 2, Background::RightLimit() - curEnem->GetSprite()->getGlobalBounds().width / 2);
+                //Start à une position aléatoire
+                curEnem->Start(Vector2f(distribution(randomEngine), -50), randomEngine);
+                //Nous l'avons trouvé, break
+                break;
+            }
+        }
         break;
     case Enemy::EnemyType::REFLECTOR:
         cout << "Reflector spawn!" << endl;
@@ -773,10 +788,10 @@ void spaceShooter::GameScene::SpawnBonus(Bonus::BonusType type, Vector2f pos)
         //Spawn d'un bonus de type score
         for (Bonus* curBonus : scoresBonus)
         {
-            if (curBonus->IsEnable())
+            if (!curBonus->IsEnable())
             {
                 curBonus->Start(pos);
-                curBonus->Disable();
+                break;
             }
         }
         break;
@@ -788,33 +803,63 @@ void spaceShooter::GameScene::SpawnBonusFromEnemyType(Enemy::EnemyType type, Vec
     //D'abord, si nous ne sommes pas de type boss
     if (type != Enemy::EnemyType::BOSS_CANNON)
     {
-
+        //Chances
+        int chances = 0;
+        //Examen des types et choisir les chances
+        switch (type)
+        {
+        case Enemy::EnemyType::BASIC:
+            chances = 20;
+            break;
+        case Enemy::EnemyType::KAMIKAZE:
+            chances = 25;
+            break;
+        case Enemy::EnemyType::REFLECTOR:
+            chances = 30;
+            break;
+        case Enemy::EnemyType::QUEEN:
+            chances = 35;
+            break;
+        }
+        //Distribution de 0 à 100
+        uniform_int_distribution<int> spawnDistribution(0, 100);
+        //Si le nombre généré est dans notre range
+        if (chances >= spawnDistribution(randomEngine))
+        {
+            //Spawn d'un bonus aléatoire
+            uniform_int_distribution<int> bonusRand(0, Bonus::BonusType::BonusType_MAX - 1);
+            //Spawn selon le type choisi
+            SpawnBonus((Bonus::BonusType)bonusRand(randomEngine), pos);
+        }
     }
     //Sinon, nous sommes de type boss, alors
     else
     {
         //Spawn d'un bonus aléatoire, car c'est un boss
         uniform_int_distribution<int> bonusRand(0, Bonus::BonusType::BonusType_MAX - 1);
-
-        //Selon le type de bonus, spawner
-        switch (bonusRand(randomEngine))
-        {
-        case Bonus::BonusType::ScoreBonus_Type:
-            //Spawn d'un bonus de score
-            break;
-        }
+        //Spawn selon le type choisi
+        SpawnBonus((Bonus::BonusType)bonusRand(randomEngine), pos);
     }
-    switch (type)
+}
+
+void spaceShooter::GameScene::UpdateNextEnemyString()
+{
+    switch (enemysToCome.Front())
     {
     case Enemy::EnemyType::BASIC:
+        nextEnemyString = "Basic Enemy";
         break;
     case Enemy::EnemyType::KAMIKAZE:
+        nextEnemyString = "Kamikaze";
         break;
     case Enemy::EnemyType::REFLECTOR:
+        nextEnemyString = "Reflector";
         break;
     case Enemy::EnemyType::QUEEN:
+        nextEnemyString = "Queen";
         break;
     case Enemy::EnemyType::BOSS_CANNON:
+        nextEnemyString = "Boss";
         break;
     }
 }
@@ -848,7 +893,8 @@ void spaceShooter::GameScene::UpdateHUD()
     if (player->GetWeaponType() != Weapon::WeaponType::BASIC_WEAPON)
         munitions = std::to_string(player->GetNbMunitions());
     munitionsLabel.setString("Shoots Left: \n" + munitions);
-    nextEnemyLabel.setString("Next Enemy: \n" + std::to_string(default));
+    //Le prochain ennemi à apparaître
+    nextEnemyLabel.setString("Next Enemy: \n" + nextEnemyString);
     //</smasson>
 }
 //</smasson>

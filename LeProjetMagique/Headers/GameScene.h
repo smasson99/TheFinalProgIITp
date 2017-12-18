@@ -49,6 +49,7 @@ namespace spaceShooter
 	private:
 
         //<smasson>
+        void UpdateNextEnemyString();
         void UpdateHUD();
 
         const int LBL_SPACEMENT = 150;
@@ -82,6 +83,9 @@ namespace spaceShooter
         Text munitionsLabel;
         Text nextEnemyLabel;
         
+        //Le prochain ennemi à apparaître
+        string nextEnemyString = "undefined";
+
         Player* player;
 
         //Les chances de drop

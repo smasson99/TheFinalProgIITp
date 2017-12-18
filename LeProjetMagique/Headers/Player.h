@@ -10,7 +10,6 @@ namespace spaceShooter
         static Player* GetInstance();
         static void KillInstance();
         void SetLimits(const Vector2f point1, const Vector2f point2);
-        void Notify(Subject* subject);
         bool Update(int commands);
         bool CanShoot();
         void Shoot();
@@ -22,9 +21,13 @@ namespace spaceShooter
         int GetScore();
         static bool Init(char path[]);
         void AdjustVisual();
+        void NotifyBonusCollision(Bonus* bonus) override;
     private:
         Player();
         ~Player();
+        void AddScoreMult();
+        Time scoreMultTime;
+        Clock scoreMultClock;
         static Player* instance;
         Vector2f limitMin;
         Vector2f limitMax;

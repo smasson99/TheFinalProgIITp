@@ -6,7 +6,8 @@ Texture ScoreBonus::texture;
 
 ScoreBonus::ScoreBonus(const float radius, const Color color, const float bonusMagnitude, const float bonusDuration, const Vector2f pos) :Bonus(radius, color, bonusMagnitude, bonusDuration, pos)
 {
-
+    //Initialisation des variables par défaut
+    type = Bonus::BonusType::ScoreBonus_Type;
 }
 
 ScoreBonus::~ScoreBonus()

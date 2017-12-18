@@ -1,4 +1,5 @@
 #pragma once
+//<smasson>
 #include <SFML\Graphics.hpp>
 #include "StaticSubject.h"
 #include "Spaceship.h"
@@ -53,3 +54,4 @@ namespace spaceShooter
         int damage;
     };
 }
+//</smasson>

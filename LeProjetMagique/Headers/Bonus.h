@@ -10,7 +10,7 @@ namespace spaceShooter
     class Bonus
     {
     public:
-        //Enum
+        //Enum du type de bonus
         static enum BonusType
         {
             ScoreBonus_Type,
@@ -32,11 +32,14 @@ namespace spaceShooter
         Vector2f GetPos();
         static void SubscribeToCollisions(Spaceship* subscriber);
         static void CleanUp();
+        Bonus::BonusType GetType();
     protected:
         float duration;
         float radius;
         float magnitude;
         Sprite* sprite;
+        //Type de bonus par défaut, à changer dans chaque enfant au constructeur
+        Bonus::BonusType type = BonusType::BonusType_MAX;
         //temp
         static vector<Spaceship*> observers;
     private:

@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "GlobalMath.h"
 #include "WeaponGenerator.h"
+#include "Bonus.h"
 
 using namespace spaceShooter;
 
@@ -15,6 +16,7 @@ Player::Player() :Spaceship()
     curWepIndex = 0;
     //Autres variables
     curScorMult = 1;
+    scoreMultTime = seconds(10);
     score = 0;
     this->isPlayer = true;
     this->maxHealth = 40;
@@ -28,6 +30,12 @@ Player::~Player()
         delete curWeapon;
     }
     weapons.clear();
+}
+
+void spaceShooter::Player::AddScoreMult()
+{
+    curScorMult = curScorMult * 2;
+    scoreMultClock.restart();
 }
 
 Player * Player::GetInstance()
@@ -47,11 +55,6 @@ void spaceShooter::Player::SetLimits(const Vector2f point1, const Vector2f point
 {
     limitMin = Vector2f(point1.x + sprite->getTexture()->getSize().x / (2 / (sprite->getScale().x)), point1.y - sprite->getTexture()->getSize().y / 16 /*/ (2 * (sprite->getScale().y))*/);
     limitMax = Vector2f(point2.x - sprite->getTexture()->getSize().x / (2 / (sprite->getScale().x)), point2.y - sprite->getTexture()->getSize().y / (14 * (sprite->getScale().y)));
-}
-
-void spaceShooter::Player::Notify(Subject * subject)
-{
-
 }
 
 bool spaceShooter::Player::Update(int commands)
@@ -91,6 +94,12 @@ bool spaceShooter::Player::Update(int commands)
     if (commands == 32)
     {
         //q, pour les changements d'armes
+    }
+
+    //Update du multiplicateur de score
+    if (scoreMultClock.getElapsedTime().asSeconds() > scoreMultTime.asSeconds() && curScorMult != 1)
+    {
+        curScorMult = 1;
     }
 
     return curHealth >= 0;
@@ -148,4 +157,23 @@ void spaceShooter::Player::AdjustVisual()
     sprite->setTexture(texture);
     sprite->setScale(0.4f, 0.4f);
     sprite->setOrigin(texture.getSize().x / 2, texture.getSize().y / 2);
+}
+
+void spaceShooter::Player::NotifyBonusCollision(Bonus * bonus)
+{
+    //Si le bonus est enable
+    if (bonus->IsEnable())
+    {
+        //Rendre le bonus disable, pour pas que les autres l'aient en leur possession eux aussi
+        bonus->Disable();
+        //Examiner le type du bonus et agir en conséquence
+        switch (bonus->GetType())
+        {
+            //Bonus de score
+        case Bonus::BonusType::ScoreBonus_Type:
+            //Ajouter un multiplicateur de score supplémentaire
+            AddScoreMult();
+            break;
+        }
+    }    
 }

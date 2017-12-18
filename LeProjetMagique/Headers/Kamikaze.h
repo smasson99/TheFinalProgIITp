@@ -12,6 +12,8 @@ namespace spaceShooter
         //<smasson>
         static bool Init(char path[]);
         void AdjustVisual();
+        bool IsEnable();
+        void Start(Vector2f startPos, default_random_engine & engine);
         //</smasson>
 		bool Update(Vector2f target);
 		void Draw(RenderWindow &win);
